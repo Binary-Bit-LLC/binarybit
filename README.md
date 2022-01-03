@@ -1,6 +1,8 @@
 # Binary Bit
 Source code for the Binary Bit website
 
+[dev.binarybit.io](https://www.dev.binarybit.io)
+
 This project uses the following:
 - React.js
 - Next.js
