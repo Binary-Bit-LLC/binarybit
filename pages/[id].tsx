@@ -73,7 +73,7 @@ export default ({ contentData }) => {
                 styles.topMargin,
               ].join(" ")}
             >
-              Give us your thoughts in our Discord server
+              Give us your thoughts in our Matrix space
             </h4>
           </Link>
           <div
