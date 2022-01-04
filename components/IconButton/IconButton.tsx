@@ -23,6 +23,7 @@ export default ({ metadata }) => {
   const { className, styles } = getButtonStyles(metadata.hoverColor);
   return (
     <div>
+      {/* Why can't the link be displayed on hover and on right click? */}
       <Link href={metadata.url}>
         <img
           className={className}
