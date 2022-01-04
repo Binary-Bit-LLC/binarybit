@@ -15,9 +15,9 @@ export const externalLinks = [
     hoverColor: "#757575",
   },
   {
-    label: "Matrix",
-    url: "https://matrix.to/#/#binary-bit:matrix.org",
-    filename: "matrix.svg",
-    hoverColor: "#757575",
+    label: "Discord",
+    url: "https://discord.gg/TYEs4qzstp",
+    filename: "discord.svg",
+    hoverColor: "#5865F2",
   },
 ];
