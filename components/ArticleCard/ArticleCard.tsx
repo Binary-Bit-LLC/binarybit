@@ -1,5 +1,4 @@
 import styles from "./ArticleCard.module.sass";
-import Link from "next/link";
 import { NextPage } from "next";
 
 interface Props {
