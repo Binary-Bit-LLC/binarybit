@@ -6,6 +6,8 @@ import {
   getSortedContentDataGivenContent,
 } from "../lib/articles";
 import ArticleCard from "../components/ArticleCard/ArticleCard";
+import { categories } from "../constants/Categories";
+import TextCTA from "../components/TextCTA/TextCTA";
 
 const metadata: { title: string; defaultDescription: boolean } = {
   title: "Binary Bit",
@@ -40,22 +42,11 @@ const Home: NextPage = ({ sortedContent }) => {
             ))}
           </div>
         </div>
-        {/* {allContentData.map((nested, index) => {
-          return (
-            <div className={styles.articlesContainer}>
-              <h2 className={styles.categoryTitle}>
-                {categories[index].label}
-              </h2>
-              <div className={styles.articleContainer}>
-              {nested.map(({ id, title, coverimage }) => {
-                return (
-                  <ArticleCard id={id} title={title} coverimage={coverimage} />
-                );
-              })}
-              </div>
-            </div>
-          );
-        })} */}
+        <div className={styles.categoriesCTA}>
+          {categories.map(({ label, id }) => (
+            <TextCTA label={label} id={id} />
+          ))}
+        </div>
       </div>
     </Layout>
   );
