@@ -17,7 +17,7 @@ const ArticleCard: NextPage<Props> = ({ id, title, coverimage, index }) => {
       ) : (
         ""
       )}
-      <Link href={`/${id}`}>
+      <a className={styles.link} href={`/${id}`}>
         <div className={`${styles.cardContainer}`}>
           <img
             className={styles.coverImage}
@@ -27,7 +27,7 @@ const ArticleCard: NextPage<Props> = ({ id, title, coverimage, index }) => {
             <h3 className={styles.title}>{title}</h3>
           </div>
         </div>
-      </Link>
+      </a>
     </div>
   );
 };
