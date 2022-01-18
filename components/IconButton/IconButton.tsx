@@ -24,14 +24,14 @@ export default ({ metadata }) => {
   return (
     <div>
       {/* Why can't the link be displayed on hover and on right click? */}
-      <Link href={metadata.url}>
+      <a href={metadata.url}>
         <img
           className={className}
           src={`/images/${metadata.filename}`}
           height={"30px"}
           alt={metadata.label} // why isn't this working...
         />
-      </Link>
+      </a>
       {styles}
     </div>
   );
