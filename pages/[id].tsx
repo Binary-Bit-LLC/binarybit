@@ -1,10 +1,8 @@
 import { getContentData, getAllContentIds } from "../lib/articles";
 import Layout from "../components/Layout/Layout";
-import Date from "../components/Date";
 import { authors } from "../constants/Authors";
-import Link from "next/link";
 import styles from "../styles/Content.module.sass";
-import { externalLinks } from "../constants/Links";
+import ArticleData from "../components/ArticleData/ArticleData";
 
 // add back button to go back to previous page
 export async function getStaticProps({ params }) {
@@ -34,48 +32,12 @@ export default ({ contentData }) => {
     <Layout metadata={metadata}>
       <div className={styles.container}>
         <article>
-          <h1 className={styles.title}>{contentData.title}</h1>
-          {author.page ? (
-            <Link href={`authors/${author.id}`}>
-              {/* is there a better way to have multiple classnames? */}
-              <h3 className={[styles.author, styles.link].join(" ")}>
-                {author.label}
-              </h3>
-            </Link>
-          ) : (
-            <h3 className={styles.author}>{author.label}</h3>
-          )}
-          <div
-            className={[
-              styles.dateContainer,
-              styles.genericText,
-              styles.topMargin,
-            ].join(" ")}
-          >
-            <h4 className={styles.genericText}>Posted&nbsp;</h4>
-            <Date dateString={contentData.date} />
-            {contentData.date === contentData.updated ? (
-              ""
-            ) : (
-              <div className={styles.updatedContainer}>
-                <h4 className={styles.genericText}>
-                  &nbsp;&nbsp;-&nbsp;&nbsp;Last Updated&nbsp;
-                </h4>
-                <Date dateString={contentData.updated} />
-              </div>
-            )}
-          </div>
-          <Link href={externalLinks[1].url}>
-            <h4
-              className={[
-                styles.genericText,
-                styles.link,
-                styles.topMargin,
-              ].join(" ")}
-            >
-              Give us your thoughts in our Discord server
-            </h4>
-          </Link>
+          <ArticleData 
+          author={author}
+          title={contentData.title} 
+          date={contentData.date}
+          updated={contentData.updated}
+          />
           <div
             className={[styles.articleText].join(" ")}
             dangerouslySetInnerHTML={{ __html: contentData.contentHtml }}
