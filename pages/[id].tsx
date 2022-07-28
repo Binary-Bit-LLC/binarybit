@@ -1,8 +1,9 @@
 import { getContentData, getAllContentIds } from "../lib/articles";
 import Layout from "../components/Layout/Layout";
 import { authors } from "../constants/Authors";
-import styles from "../styles/Content.module.sass";
+import styles from "../styles/Content.module.scss";
 import ArticleData from "../components/ArticleData/ArticleData";
+import AuthorCard from "../components/AuthorCard/AuthorCard";
 
 // add back button to go back to previous page
 export async function getStaticProps({ params }) {
@@ -31,19 +32,19 @@ export default ({ contentData }) => {
   return (
     <Layout metadata={metadata}>
       <div className={styles.container}>
-        <article>
-          <ArticleData 
-          author={author}
-          title={contentData.title} 
-          date={contentData.date}
-          updated={contentData.updated}
+        <article className="flex flex-col items-center justify-center">
+          <ArticleData
+            author={author}
+            title={contentData.title}
+            date={contentData.date}
+            updated={contentData.updated}
           />
           <div
-            className={[styles.articleText].join(" ")}
+            className="mt-10 text-xl leading-10 mx-4"
             dangerouslySetInnerHTML={{ __html: contentData.contentHtml }}
           />
         </article>
-        {/* maybe put a little "About" card on the bottom */}
+        <AuthorCard author={author} className="mt-12" link={true} />
       </div>
     </Layout>
   );
