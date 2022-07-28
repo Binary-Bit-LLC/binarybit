@@ -4,17 +4,16 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import { categories } from "../constants/Categories";
+import { Article } from "../constants/Types";
 
 const latestContentCount: number = 10;
 const mainPagePreviewArticlesCount: number = 5;
-let contentArray: { id: string; category: string }[];
-let contentCategoriesArray: { id: string }[][];
+let contentArray: Article[];
+let contentCategoriesArray: Article[][];
 
 // Maybe use key-value pairs instead?
 
-export function getSortedContentData(
-  category: string
-): { id: string; category: string }[] {
+export function getSortedContentData(category: string): Article[] {
   const directory: string = path.join(process.cwd(), `articles/${category}`);
   const fileNames: string[] = fs.readdirSync(directory);
   const allContentData: { id: string; category: string }[] = fileNames.map(
@@ -42,8 +41,8 @@ export function getSortedContentData(
   });
 }
 
-export const getSortedContentDataByCategory = (): { id: string }[][] => {
-  const sortedContentData: { id: string; category: string }[][] = [];
+export const getSortedContentDataByCategory = (): Article[][] => {
+  const sortedContentData: Article[][] = [];
   categories.forEach((category) => {
     sortedContentData.push(
       getSortedContentData(category.id).slice(0, mainPagePreviewArticlesCount)
@@ -61,21 +60,18 @@ export const getSortedContentDataByCategory = (): { id: string }[][] => {
   return sortedContentData;
 };
 
-export const getSortedContentDataGivenContent = (): { id: string }[] => {
-  return (
-    contentArray
-      // @ts-ignore
-      .sort(({ date: a }, { date: b }) => {
-        if (a < b) {
-          return 1;
-        } else if (a > b) {
-          return -1;
-        } else {
-          return 0;
-        }
-      })
-      .slice(0, latestContentCount)
-  );
+export const getSortedContentDataGivenContent = (): Article[] => {
+  return contentArray
+    .sort(({ date: a }, { date: b }) => {
+      if (a < b) {
+        return 1;
+      } else if (a > b) {
+        return -1;
+      } else {
+        return 0;
+      }
+    })
+    .slice(0, latestContentCount);
 };
 
 export function getAllContentIds(): { params: { id: string } }[] {
@@ -109,8 +105,8 @@ export function getAllContentIdsByCategory(
 
 export async function getContentData(id: string) {
   if (!contentArray) getSortedContentDataByCategory();
-  const contentData: { id: string; category: string } | undefined =
-    contentArray.find((article: { id: string; category: string }) => {
+  const contentData: Article | undefined =
+    contentArray.find((article: Article) => {
       return article.id === id;
     });
   if (!contentData)
