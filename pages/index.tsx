@@ -8,6 +8,7 @@ import {
 import ArticleCard from "../components/ArticleCard/ArticleCard";
 import { categories } from "../constants/Categories";
 import TextCTA from "../components/TextCTA/TextCTA";
+import { Article } from "../constants/Types";
 
 const metadata: { title: string; defaultDescription: boolean } = {
   title: "Binary Bit",
@@ -15,18 +16,20 @@ const metadata: { title: string; defaultDescription: boolean } = {
 };
 
 export async function getStaticProps() {
-  const allContentData: { id: string }[][] = getSortedContentDataByCategory();
-  const sortedContent = getSortedContentDataGivenContent();
+  getSortedContentDataByCategory();
+  const sortedContent: Article[] = getSortedContentDataGivenContent();
   return {
     props: {
-      allContentData: allContentData,
       sortedContent: sortedContent,
     },
   };
 }
 
-// @ts-ignore
-const Home: NextPage = ({ sortedContent }) => {
+interface Props {
+  sortedContent: Article[];
+}
+
+const Home: NextPage<Props> = ({ sortedContent }) => {
   return (
     <Layout metadata={metadata}>
       <div className={styles.container}>
