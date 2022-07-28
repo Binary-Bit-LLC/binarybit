@@ -9,12 +9,12 @@ export default () => {
     <div className={styles.container}>
       <div className={styles.primaryContainer}>
         <div className={styles.wrapper}>
-          <Branding/>
-          <Navbar/>
-          <ExternalLinks/>
+          <Branding />
+          <Navbar />
+          <ExternalLinks />
         </div>
       </div>
-      <GradientBar/>
+      <GradientBar />
     </div>
   );
 };
