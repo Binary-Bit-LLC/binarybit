@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff; // corner smoothing
+  border-radius: 20px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 750;
+}
+
+.author {
+  font-size: 1.2rem;
+}
+
+.genericText {
+  font-size: 1.1rem;
+}
+
+.dateContainer {
+  display: flex;
+}
+
+// I think a different font must be used
+.articleText {
+  margin-top: 1em;
+  font-size: 1.15rem;
+  line-height: 2em;
+}

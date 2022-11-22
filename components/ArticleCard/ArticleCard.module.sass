@@ -1,0 +1,68 @@
+// Alternate design: 
+// 3 rows of latest articles
+// below, have links to the categories, and have arrows that go out on hover
+
+.container
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+    margin: 0 20px 0 20px
+    height: 19em
+    @media (max-width: 622px)
+        height: 23em
+    // width: 240px
+    // @media (max-width: 622px)
+    //     align-items: center
+    // width: auto
+
+.cardContainer
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    border-radius: 20px // corner smoothing
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1)
+    width: 15em
+    cursor: pointer
+    transition: all 0.2s
+    &:hover
+        transition: all 0.2s
+        transform: translateY(-3px)
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+    &:active
+        transform: translateY(-1px)
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+    @media (max-width: 622px)
+        width: 22em
+
+.titleContainer
+    display: flex
+    padding: .6em 1em 0 1em
+    background-color: #fff
+    border-radius: 20px
+    height: 7em
+
+.title
+    font-weight: 700
+    font-size: 20px
+
+.coverImage
+    width: 15em
+    height: 8.438em
+    border-radius: 20px
+    object-fit: cover
+    user-select: none
+    @media (max-width: 622px)
+        width: 22em
+        height: 12.375em
+         // implement corner smoothing
+
+.categoryTitle
+    font-size: 26px
+    font-weight: 900
+    font-family: Mulish
+    color: #111
+    margin-bottom: 30px
+
+.link
+    color: #000
+    text-decoration: none

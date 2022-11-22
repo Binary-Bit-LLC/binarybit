@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 211.66667 211.66667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="bit_no_shadow.svg"
+   inkscape:export-filename="/home/dn0r/Pictures/Design/Sites/Binary Bit/logo/variants/normal/bit_no_shadow.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     width="800px"
+     showguides="true"
+     inkscape:snap-bbox="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.5625"
+     inkscape:cx="68.444444"
+     inkscape:cy="277.33333"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g5858" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2466">
+      <stop
+         style="stop-color:#0055d4;stop-opacity:1;"
+         offset="0"
+         id="stop2462" />
+      <stop
+         style="stop-color:#00ffcc;stop-opacity:1"
+         offset="1"
+         id="stop2464" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2466"
+       id="linearGradient2468"
+       x1="-0.67616886"
+       y1="0.14422554"
+       x2="210.99051"
+       y2="211.8109"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.67616886,-0.14422554)"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:url(#linearGradient2468);fill-opacity:1;stroke-width:4.67;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect208071"
+       width="211.66667"
+       height="211.66667"
+       x="-0.67616886"
+       y="0.14422554"
+       ry="6"
+       inkscape:export-filename="/home/dn0r/Pictures/Design/Sites/Binary Bit/rect208071.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="bit"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <g
+       id="g5858"
+       transform="matrix(1.16468,0,0,1.1351179,-0.19766026,0.76052178)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:5.03728;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="rect4802"
+         width="57"
+         height="57"
+         x="62.538738"
+         y="64.065552"
+         ry="5.4000001" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:2.85697;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal;"
+         id="rect4802-6"
+         width="32.000206"
+         height="32"
+         x="97.5"
+         y="56"
+         ry="5.4000001" />
+    </g>
+  </g>
+</svg>

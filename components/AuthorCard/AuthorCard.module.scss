@@ -1,0 +1,26 @@
+.container {
+  background-color: #fff;
+  border-radius: 20px; // corner smoothing
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+}
+
+.authorTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+  width: 60%;
+}
+
+.authorPicture {
+  height: 7rem;
+  width: auto;
+  border-radius: 25px;
+}
+
+.authorLabel {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
